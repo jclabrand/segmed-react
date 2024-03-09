@@ -1,0 +1,16 @@
+
+.signin {
+	width: 24rem;
+	margin: 2rem auto;
+	border: 1px solid #b1b8c5;
+	border-radius: 10px;
+	padding: 2rem 0.8rem;
+}
+
+.signin .signin-button {
+	margin-top: 3rem;
+}
+
+.signin .signin-button button {
+	width: 100%;
+}
