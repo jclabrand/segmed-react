@@ -1,4 +1,5 @@
 
+import { CreateDialog } from './dialog/create-dialog'
 import { ErrorDialog } from './dialog/error-dialog'
 import { Loader } from './loader/loader'
 import { NavAction } from './navbar/nav-action'
@@ -11,6 +12,7 @@ import { ToolBarMenu } from './toolbar/toolbar-menu'
 
 
 export {
+	CreateDialog,
 	ErrorDialog,
 	Loader,
 	NavAction,
