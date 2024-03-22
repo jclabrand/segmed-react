@@ -13,7 +13,7 @@ export function UserList() {
 	const { addKey, estado } = useAntdHelp()
 	const [ error, onError ] = useError()
 	const { loading, data, refetch } = useQuery(query.USERS, { onError })
-		, [ usuarios, filter ] = useFilter(addKey(data?.users), ['userName', 'displayName'])
+		, [ users, filter ] = useFilter(addKey(data?.users), ['userName', 'displayName'])
 	const { Column } = Table
 	useSubscription(subscription.USER_UPSERTED, { onData: () => refetch() })
 
@@ -27,7 +27,7 @@ export function UserList() {
 
 			<Table
 				size='middle'
-				dataSource={usuarios}
+				dataSource={users}
 				bordered={true}
 				pagination={{ pageSize: 15 }}
 			>
@@ -35,8 +35,8 @@ export function UserList() {
 				<Column title='Usuario' dataIndex='userName'/>
 				<Column title='Nombre' dataIndex='displayName'/>
 				<Column title='Correo electrónico' dataIndex='email'/>
-				<Column title='Estado' render={usuario => {
-					const e = estado(usuario.status)
+				<Column title='Estado' render={record => {
+					const e = estado(record.status)
 					return (<Tag color={ e.color }>{ e.label }</Tag>)
 				}}/>
 			</Table>
