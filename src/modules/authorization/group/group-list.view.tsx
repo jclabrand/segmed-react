@@ -7,6 +7,7 @@ import { ErrorDialog, Loader, ToolBar, ToolBarMenu } from '../../../components'
 import { useAntdHelp, useError, useFilter } from '../../../hooks'
 
 import { query, subscription } from './group.constant'
+import { CreateGroup } from './group-upsert.view'
 
 
 export function GroupList() {
@@ -22,6 +23,9 @@ export function GroupList() {
 			<ToolBar>
 				<ToolBarMenu>
 					<Input.Search enterButton onSearch={filter}/>
+				</ToolBarMenu>
+				<ToolBarMenu>
+					<CreateGroup/>
 				</ToolBarMenu>
 			</ToolBar>
 

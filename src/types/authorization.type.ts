@@ -9,3 +9,11 @@ export type User = {
 
 	isAuthorized:	boolean
 }
+
+export type Group = {
+	id:				number
+	name:			string
+	description?:	string
+	
+	status:			number
+}

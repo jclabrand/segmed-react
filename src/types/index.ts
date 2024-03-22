@@ -1,7 +1,13 @@
 
-import { User } from './authorization.type'
+import { User, Group } from './authorization.type'
 
+type UpdateProps = {
+	id: number
+}
 
 export type {
-	User
+	User,
+	Group,
+
+	UpdateProps
 }
