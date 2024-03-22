@@ -11,7 +11,7 @@ import { authState, userState, getDefaultUser, setAuth } from '../utils'
 
 import { mutation } from '../modules/authorization/signin/signin.constant'
 import { Home, NotFound } from '../modules/basic'
-import { UserList } from '../modules/authorization'
+import { UserList, GroupList } from '../modules/authorization'
 
 
 function useAuthorized() {
@@ -106,6 +106,7 @@ export function Authorized() {
 
 						<Route path="configuracion">
 							<Route path="usuarios" element={<UserList/>}/>
+							<Route path="grupos" element={<GroupList/>}/>
 						</Route>
 
 						<Route path="*" element={<NotFound/>}/>
